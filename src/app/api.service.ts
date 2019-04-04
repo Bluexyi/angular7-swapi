@@ -1,0 +1,29 @@
+import { Injectable } from '@angular/core';
+import {HttpClient,HttpResponse, HttpResponseBase} from "@angular/common/http";
+import { Observable } from "rxjs";
+import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
+import { map } from 'rxjs/operators';
+import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
+
+@Injectable()
+export class ApiService {
+  
+  constructor(private http: HttpClient ) {}
+ 
+ createURL(numEpisode): string {
+   var urlApi: string = "https://swapi.co/api/films/" + numEpisode + "/?format=json";
+   return urlApi;
+ }
+
+ 
+ getPostsApi(url: string): Observable<any>{
+  console.log("result===>",this.http.get(url).pipe(map(res => res))); 
+   return this.http.get(url).pipe(map(res => res));
+  }
+  
+ private handleError(error: Response) {
+   return Observable.throw(error.statusText);
+ }
+
+}
+//https://swapi.co/api/films/2/?format=json

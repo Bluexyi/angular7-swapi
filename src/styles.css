@@ -1,0 +1,55 @@
+@font-face { font-family: 'Starjedi'; src: url('./police/Starjedi.ttf');}
+
+
+html, body {
+	overflow : auto; 
+	margin:0; 
+	padding:0; 
+	overflow: hidden; 
+	height:100%; 
+	width: 100%;
+    position: fixed; 
+    background-image: url("./images/fd1.jpg");
+}
+
+body {
+	background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+    flex-direction: column;
+	position: fixed; 
+    overflow: auto;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+h1, h2{ font-family: 'Starjedi'; text-align: center}
+h1{font-size: 4.5em; text-shadow: #FC0 1px 0 10px;}
+h2{font-size: 2.5em}
+
+.resume{font-family: 'Starjedi'; font-size: 1.3em; padding: 25px; text-align: justify; overflow: auto}
+
+.cont1{
+    background-image: url("./images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 350px;
+    margin-bottom: 20px;
+
+}
+
+.cont2{
+    background-image: url("./images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 440px;
+}
