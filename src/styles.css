@@ -19,16 +19,26 @@ body {
     flex-direction: column;
 	position: fixed; 
     overflow: auto;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
 }
 
-h1, h2{ font-family: 'Starjedi'; text-align: center}
-h1{font-size: 4.5em; text-shadow: #FC0 1px 0 10px;}
-h2{font-size: 2.5em}
+.appRoot{display: flex;
+    align-items: center;
+flex-direction: column}
+
+h1, h2, h3{ font-family: 'Starjedi'; text-align: center}
+h1{font-size: 4.5em; text-shadow: #FC0 1px 0 10px; padding-top: 80px;}
+h2{font-size: 2.5em; text-shadow: #FC0 1px 0 10px;}
+h3{font-size: 2em}
 
 .resume{font-family: 'Starjedi'; font-size: 1.3em; padding: 25px; text-align: justify; overflow: auto}
+
+.global{display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;}
 
 .cont1{
     background-image: url("./images/transBlack.png");
@@ -40,6 +50,8 @@ h2{font-size: 2.5em}
     color: #ffd301;
     min-width: 350px;
     margin-bottom: 20px;
+    max-height: 440px;
+    min-height: 440px;
 
 }
 
@@ -52,4 +64,24 @@ h2{font-size: 2.5em}
     border: #ffd301 solid 1px;
     color: #ffd301;
     min-width: 440px;
+    max-height: 440px;
+    min-height: 440px;
+
+}
+
+.containerFilm{
+    background-image: url("./images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 440px;
+    max-height: 700px;
+    min-height: 700px;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 80%;
+    overflow-y: auto;
 }

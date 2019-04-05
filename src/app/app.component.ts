@@ -1,8 +1,7 @@
 import { Component , OnInit } from '@angular/core';
 import { ApiService } from "./api.service"
 import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
-import { error } from 'util';
-import { Observable } from "rxjs";
+import { InterfaceStartWarsCharacter } from "./interface-starWarsCharater";
 
 @Component({
   selector: 'app-root',
@@ -15,24 +14,37 @@ export class AppComponent implements OnInit{
   title = 'app';
 
   saisieNumEpisode: string = "4";
-
   detailFilm: InterfaceStartWarsMovie[];
+
+  saisieNameCharacter : string = "Luke Skywalker";
+  detailCharacter: InterfaceStartWarsCharacter[];
 
   constructor(private apiSerivce: ApiService){}
 
-  getPosts(): void {
-    var url =this.apiSerivce.createURL(this.saisieNumEpisode);
-    this.apiSerivce.getPostsApi(url).
+  getMovie(): void {
+    var url =this.apiSerivce.createURLMovie(this.saisieNumEpisode);
+    this.apiSerivce.getPostsApi(url)
+       .subscribe(
+       res => {
+        this.detailFilm = res;
+        console.log("result===>",res); 
+       } 
+       );
+  }
+
+  getCharacter(): void {
+    this.apiSerivce.getCharactersApi().
        subscribe(
-       resultArray => {
-        this.detailFilm = resultArray;
-        console.log("result===>",resultArray); 
+       res => {
+        this.detailCharacter = res;
+        console.log("result===>",res); 
        } 
        );
   }
 
   ngOnInit(): void{
-    this.getPosts();
+    this.getMovie();
+    this.getCharacter();
   }
 
 }

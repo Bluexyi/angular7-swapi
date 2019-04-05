@@ -9,8 +9,10 @@ import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
 export class ApiService {
   
   constructor(private http: HttpClient ) {}
+
+  urlAllCharacters: string = "https://swapi.co/api/people/?format=json"
  
- createURL(numEpisode): string {
+ createURLMovie(numEpisode): string {
    var urlApi: string = "https://swapi.co/api/films/" + numEpisode + "/?format=json";
    return urlApi;
  }
@@ -25,5 +27,15 @@ export class ApiService {
    return Observable.throw(error.statusText);
  }
 
+ getCharactersApi(): Observable<any>{
+  console.log("result===>",this.http.get(this.urlAllCharacters).pipe(map(res => res))); 
+  return this.http.get(this.urlAllCharacters).pipe(map(res => res));
+ }
+
+
+
+ 
+
 }
 //https://swapi.co/api/films/2/?format=json
+//https://swapi.co/api/people/?format=json
