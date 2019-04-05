@@ -36,8 +36,9 @@ export class AppComponent implements OnInit{
     this.apiSerivce.getCharactersApi().
        subscribe(
        res => {
-        this.detailCharacter = res;
-        console.log("result===>",res); 
+        this.detailCharacter = res.results;
+        console.log("result===>",res.results); 
+        console.log("detailcharacter ===>", this.detailCharacter); 
        } 
        );
   }

@@ -30,12 +30,13 @@
         <input type="text" [(ngModel)]="saisieNameCharacter"  class="saisiIdEpisode" name="nameCharacter" maxlength="20" size="20">
         <button class="myButton" (click)="getCharacter()">Valider</button>
         <br><br><br>
-        <p class="textDetail" style="width: 400px">Title : {{ detailFilm.title }}</p>
-        <p class="textDetail" style="width: 400px">Episode numéro : {{ detailFilm.episode_id }}</p>
-        <p class="textDetail" style="width: 400px">Director : {{ detailFilm.director }}</p>
-        <p class="textDetail" style="width: 400px">Producer : {{ detailFilm.producer }}</p>
-        <p class="textDetail" style="width: 400px">Date release : {{ detailFilm.release_date }}</p>
+
+        <p>List of Characters :</p>
+        <ul>
+            <li *ngFor="let Character of detailCharacter">{{ Character.name }}</li>
+        </ul>
       </div>
+      
       <div class="cont2">
         <h3>opening</h3>
         <p class="resume">{{ detailFilm.opening_crawl }}</p>
