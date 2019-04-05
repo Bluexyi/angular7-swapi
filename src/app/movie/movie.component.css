@@ -1,0 +1,27 @@
+.cont1{ width: 30%;
+	height: 70%;
+	}
+
+.cont2{width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center}
+
+
+.containerFilm{display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+	height: 100%;
+    flex-wrap: wrap;}
+    
+.textDetail{font-size: 1.2em;}
+
+
+.saisiIdEpisode{
+    background-color:#ffec64;
+    border-radius:6px;
+    border:1px solid #ffaa22;
+    font-size: 1.1em;
+}

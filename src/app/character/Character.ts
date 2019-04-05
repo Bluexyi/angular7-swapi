@@ -1,6 +1,6 @@
-import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
+import { Movie } from "src/app/movie/Movie"
 
-export interface InterfaceStartWarsCharacter {
+export class Character {
     name: String;
     height: String;
     mass:  String;
@@ -9,5 +9,5 @@ export interface InterfaceStartWarsCharacter {
     eye_color:  String;
     birth_year:  String;
     gender:  String;
-    films:Array<InterfaceStartWarsMovie>;
+    films:Array<Movie>;
 }

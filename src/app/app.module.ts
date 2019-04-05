@@ -5,12 +5,16 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { FilterPipe} from './filter.pipe';
+import { CharacterComponent } from './character/character.component';
+import { MovieComponent } from './movie/movie.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterPipe
+    FilterPipe,
+    CharacterComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

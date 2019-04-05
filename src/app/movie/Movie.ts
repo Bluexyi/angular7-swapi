@@ -1,4 +1,4 @@
-export interface InterfaceStartWarsMovie {
+export class Movie {
     title: String;
     episode_id: Number;
     director: String;

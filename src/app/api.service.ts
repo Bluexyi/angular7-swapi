@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient,HttpResponse, HttpResponseBase} from "@angular/common/http";
 import { Observable } from "rxjs";
-import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
 import { map } from 'rxjs/operators';
-import { createUrlResolverWithoutPackagePrefix } from '@angular/compiler';
 
 @Injectable()
 export class ApiService {

@@ -1,0 +1,52 @@
+
+.containerCharacters{
+    background-image: url("src/images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 440px;
+    max-height: 700px;
+    min-height: 700px;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.contCharacter{
+    background-image: url("src/images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 350px;
+    margin: 20px;
+    max-height: 340px;
+    min-height: 340px;   
+    max-width: 340px;
+    min-width: 340px;   
+}
+
+.contAllCharacters{
+    border-radius: 15px;
+    padding: 15px;
+    min-width: 350px;
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
+}

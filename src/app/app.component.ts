@@ -1,7 +1,7 @@
 import { Component , OnInit } from '@angular/core';
 import { ApiService } from "./api.service"
-import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
-import { InterfaceStartWarsCharacter } from "./interface-starWarsCharater";
+import { Movie } from "./movie/Movie";
+import { Character } from "./character/Character";
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,10 @@ import { InterfaceStartWarsCharacter } from "./interface-starWarsCharater";
 export class AppComponent implements OnInit{
 
   saisieNumEpisode: string = "4";
-  detailFilm: InterfaceStartWarsMovie[];
+  detailFilm: Movie[];
 
   saisieNameCharacter : string = "";
-  detailCharacter: InterfaceStartWarsCharacter[];
+  detailCharacter: Character[];
 
   constructor(private apiSerivce: ApiService){}
 
