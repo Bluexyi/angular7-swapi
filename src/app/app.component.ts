@@ -1,7 +1,7 @@
 import { Component , OnInit } from '@angular/core';
-import { ApiService } from "./api.service"
-import { Movie } from "./movie/Movie";
-import { Character } from "./character/Character";
+import { ApiService } from './api.service';
+import { Movie } from './movie/Movie';
+import { Character } from './character/Character';
 
 @Component({
   selector: 'app-root',
@@ -10,21 +10,21 @@ import { Character } from "./character/Character";
   providers:[ApiService]
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
-  saisieNumEpisode: string = "4";
+  saisieNumEpisode: string = '4';
   detailFilm: Movie[];
 
-  saisieNameCharacter : string = "";
+  saisieNameCharacter: string = '';
   detailCharacter: Character[];
 
-  constructor(private apiSerivce: ApiService){}
+  constructor(private apiSerivce: ApiService) {}
 
   getMovie(): void {
-    var url =this.apiSerivce.createURLMovie(this.saisieNumEpisode);
-    this.apiSerivce.getPostsApi(url)
-       .subscribe( res => { this.detailFilm = res; }
-       );
+    if (parseInt(this.saisieNumEpisode, 10) > 7 ) { this.saisieNumEpisode = '7'; }
+    this.apiSerivce.getPostsApi(this.apiSerivce.createURLMovie(this.saisieNumEpisode))
+      .subscribe( res => { this.detailFilm = res; }
+      );
   }
 
   getMovieCharacter(url: string): void {
@@ -32,8 +32,7 @@ export class AppComponent implements OnInit{
        .subscribe(
        res => {
         this.detailFilm = res;
-        console.log("result===>",res); 
-       } 
+       }
        );
   }
 
@@ -42,13 +41,11 @@ export class AppComponent implements OnInit{
        subscribe(
        res => {
         this.detailCharacter = res.results;
-        console.log("result===>",res.results); 
-        console.log("detailcharacter ===>", this.detailCharacter); 
-       } 
+       }
        );
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getMovie();
     this.getCharacter();
   }
