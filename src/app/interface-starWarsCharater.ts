@@ -1,4 +1,3 @@
-
 import { InterfaceStartWarsMovie } from "./interface-starWarsMovie";
 
 export interface InterfaceStartWarsCharacter {

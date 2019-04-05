@@ -11,12 +11,11 @@ import { InterfaceStartWarsCharacter } from "./interface-starWarsCharater";
 })
 
 export class AppComponent implements OnInit{
-  title = 'app';
 
   saisieNumEpisode: string = "4";
   detailFilm: InterfaceStartWarsMovie[];
 
-  saisieNameCharacter : string = "Luke Skywalker";
+  saisieNameCharacter : string = "";
   detailCharacter: InterfaceStartWarsCharacter[];
 
   constructor(private apiSerivce: ApiService){}
@@ -24,6 +23,12 @@ export class AppComponent implements OnInit{
   getMovie(): void {
     var url =this.apiSerivce.createURLMovie(this.saisieNumEpisode);
     this.apiSerivce.getPostsApi(url)
+       .subscribe( res => { this.detailFilm = res; }
+       );
+  }
+
+  getMovieCharacter(url: string): void {
+    this.apiSerivce.getMovieForCharacter(url)
        .subscribe(
        res => {
         this.detailFilm = res;

@@ -20,8 +20,13 @@ export class ApiService {
  
  getPostsApi(url: string): Observable<any>{
   console.log("result===>",this.http.get(url).pipe(map(res => res))); 
-   return this.http.get(url).pipe(map(res => res));
+   return this.http.get(url);
   }
+
+  getMovieForCharacter(url: string): Observable<any>{
+    console.log("result===>",this.http.get(url).pipe(map(res => res))); 
+     return this.http.get(url).pipe(map(res => res));
+    }
   
  private handleError(error: Response) {
    return Observable.throw(error.statusText);

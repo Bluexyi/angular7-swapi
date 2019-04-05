@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+import { FilterPipe} from './filter.pipe';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -18,4 +20,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

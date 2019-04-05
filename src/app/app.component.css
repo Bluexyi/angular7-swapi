@@ -9,11 +9,18 @@
     flex-direction: column;
     align-items: center}
 
+.contCharacter{
+	width: 30%;
+	height: 70%;
+	
+}
+
 .containerFilm{display: flex;
     flex-direction: row;
     justify-content: space-around;
 	height: 100%;
 	flex-wrap: wrap;}
+
 
 .textDetail{font-size: 1.2em;}
 

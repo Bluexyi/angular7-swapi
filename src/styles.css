@@ -32,6 +32,7 @@ h1, h2, h3{ font-family: 'Starjedi'; text-align: center}
 h1{font-size: 4.5em; text-shadow: #FC0 1px 0 10px; padding-top: 80px;}
 h2{font-size: 2.5em; text-shadow: #FC0 1px 0 10px;}
 h3{font-size: 2em}
+h4{font-size: 1.3em; text-shadow: #FC0 1px 0 10px; text-align: center}
 
 .resume{font-family: 'Starjedi'; font-size: 1.3em; padding: 25px; text-align: justify; overflow: auto}
 
@@ -52,7 +53,6 @@ flex-wrap: wrap;}
     margin-bottom: 20px;
     max-height: 440px;
     min-height: 440px;
-
 }
 
 .cont2{
@@ -84,4 +84,56 @@ flex-wrap: wrap;}
     margin-bottom: 15px;
     width: 80%;
     overflow-y: auto;
+}
+
+.containerCharacters{
+    background-image: url("./images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 440px;
+    max-height: 700px;
+    min-height: 700px;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.contCharacter{
+    background-image: url("./images/transBlack.png");
+	background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 15px;
+    padding: 15px;
+    border: #ffd301 solid 1px;
+    color: #ffd301;
+    min-width: 350px;
+    margin: 20px;
+    max-height: 340px;
+    min-height: 340px;   
+    max-width: 340px;
+    min-width: 340px;   
+}
+
+.contAllCharacters{
+    border-radius: 15px;
+    padding: 15px;
+    min-width: 350px;
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+
 }
