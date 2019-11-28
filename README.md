@@ -1,27 +1,62 @@
-# AngularStarWarsMovies
+# Sawpi-app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
-## Development server
+## Getting Started (Without docker)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Installing node10.x, npm and angular7
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+run `curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -`
 
-## Build
+run `sudo apt install -y nodejs`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+run `sudo apt install npm -y`
 
-## Running unit tests
+run `npm install -g @angular/cli@7.3.7`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installing dependence
 
-## Running end-to-end tests
+run `npm install` at project root.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Running app
 
-## Further help
+run `npm start` at project root. Acces app -> http://localhost:4200
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Getting Started (With docker)
+
+### Prerequisites
+
+Installing docker (debian 9)
+
+run `curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -`
+
+run `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"`
+
+run `sudo apt update`
+
+run `apt-cache policy docker-ce`
+
+run `sudo apt install docker-ce -y`
+
+For run Docker commands without sudo
+
+run `sudo usermod -aG docker {USER}`
+
+run `sudo service docker restart`
+
+
+### Running app
+
+run `docker run .` at project root. Acces app -> http://localhost:8000
+
+
+
+
+
+## Authors
+
+* **Lenoir Romain**
+
+
