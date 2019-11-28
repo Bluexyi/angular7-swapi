@@ -49,7 +49,9 @@ run `sudo service docker restart`
 
 ### Running app
 
-run `docker run .` at project root. Acces app -> http://localhost:8000
+run `docker build -t swapi-app .` at project root for build image
+
+run `docker run -d -p {PORT}:4200 swapi-app` Acces app -> http://localhost:{PORT}
 
 
 
